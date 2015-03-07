@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-$active_group = 'default';
+$active_group = 'develop';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -86,8 +86,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-/* local よう
-$db['default'] = array(
+$db['develop'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
@@ -109,4 +108,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-*/
