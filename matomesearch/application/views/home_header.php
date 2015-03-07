@@ -37,7 +37,7 @@
         <ul>
             <div class="search">
 
-                <input type="text">
+                <input type="text" name="search">
 
             </div>
         </ul>

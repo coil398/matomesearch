@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 		public function __construct()
 	  {
 	    parent::__construct();
-	  	$this->load->model('Home_model');
+	  	// $this->load->model('Home_model');
 		}
 
 		public function index()
@@ -30,7 +30,7 @@ class Home extends CI_Controller {
 			//各xmlの読み込み
 			$xml_lists = $this->loadXml();
 
-			$this->Home_model->rssInsertDB($xml_lists);
+			// $this->Home_model->rssInsertDB($xml_lists);
 
 			//ビュー用のデータにセット
 			$data['xml_lists'] = $xml_lists;
