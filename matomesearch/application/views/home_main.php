@@ -1,8 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
-
         <div class="main">
 
             todo: 検索ボックス、表示画面
