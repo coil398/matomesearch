@@ -27,12 +27,18 @@ class Home extends CI_Controller {
 
 		public function index()
 		{
+<<<<<<< HEAD
+			$this->load->view('home_header');
+			$this->load->view('home_main');
+			$this->load->view('home_footer');
+=======
 			//各xmlの読み込み
 			$xml_lists = $this->loadXml();
 
 			print_r($xml_lists);
 
 			$this->load->view('home_index');
+>>>>>>> 5145fbcc67562f0c768af82445b089d8c4cd57f4
 		}
 
 
