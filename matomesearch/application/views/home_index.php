@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,11 +12,11 @@
     <div class="containet">
         <div class="row">
             <div class="col-xs-12">
-                
+
             </div>
         </div>
     </div>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-2.1.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
