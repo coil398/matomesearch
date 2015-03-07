@@ -33,7 +33,7 @@ class Home extends CI_Controller {
 			//ビュー用のデータにセット
 			$data['xml_lists'] = $xml_lists;
 
-			//print_r($xml_lists);
+			print_r($xml_lists);
 
 			$this->load->view('home_index', $data);
 
@@ -62,7 +62,7 @@ class Home extends CI_Controller {
 
 		}
 
-
+/*
 		public function ajaxKeyword()
 		{
 			if(isset($_GET['keyword']) && !empty($_GET['keyword']))
@@ -78,14 +78,14 @@ class Home extends CI_Controller {
 
 		function ajaxSuccess($keyword)
 		{
-			
+			return;
 		}
 
 		function ajaxError()
 		{
 			return 500;
 		}
-
+*/
 
 
 
