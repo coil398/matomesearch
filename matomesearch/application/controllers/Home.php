@@ -28,14 +28,12 @@ class Home extends CI_Controller {
 		public function index()
 		{
 			//各xmlの読み込み
-			//$xml_lists = $this->loadXml();
+			$xml_lists = $this->loadXml();
 
 			//$this->Home_model->rssInsertDB($xml_lists);
 
 			//$db_lists = $this->Home_model->loadAllPages();
 
-			$url_list = $this->rssUrls();
-			$this->Home_model->setAllBlogs($url_list);
 
 			//ビュー用のデータにセット
 			//$data['xml_lists'] = $xml_lists;
