@@ -64,7 +64,7 @@ class Home extends CI_Controller {
 
 		}
 
-/*
+
 		public function ajaxKeyword()
 		{
 			if(isset($_GET['keyword']) && !empty($_GET['keyword']))
@@ -87,7 +87,7 @@ class Home extends CI_Controller {
 		{
 			return 500;
 		}
-*/
+
 
 
 
