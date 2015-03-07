@@ -28,16 +28,19 @@ class Home extends CI_Controller {
 		public function index()
 		{
 			//各xmlの読み込み
-			$xml_lists = $this->loadXml();
+			//$xml_lists = $this->loadXml();
 
-			$this->Home_model->rssInsertDB($xml_lists);
+			//$this->Home_model->rssInsertDB($xml_lists);
 
-			$db_lists = $this->Home_model->loadAllPages();
+			//$db_lists = $this->Home_model->loadAllPages();
+
+			$url_list = $this->rssUrls();
+			$this->Home_model->setAllBlogs($url_list);
 
 			//ビュー用のデータにセット
 			$data['xml_lists'] = $xml_lists;
 
-			print_r($db_lists);
+			//print_r($db_lists);
 
 			$this->load->view('home_index', $data);
 
@@ -131,7 +134,7 @@ class Home extends CI_Controller {
 
 			 //"育ママ速報" => "http://ikumamasokuhou.doorblog.jp/index.rdf",//今は使えない
 
-			 /*"芸能ニュースNOW!!" => "http://blog.geinou-now.com/index.rdf",
+			 "芸能ニュースNOW!!" => "http://blog.geinou-now.com/index.rdf",
 
 			 "2ちゃんねるのサッカーまとめブログ" => "http://footballnet.2chblog.jp/index.rdf",
 
@@ -181,7 +184,7 @@ class Home extends CI_Controller {
 
 			 "隣人注意報" => "http://blog.livedoor.jp/rinjinyabai/index.rdf",
 
-			 "はぅわ！【2ch】" => "http://blog.livedoor.jp/nico3q3q/index.rdf"/*,
+			 "はぅわ！【2ch】" => "http://blog.livedoor.jp/nico3q3q/index.rdf",
 
 			 "ニュース30over" => "http://www.news30over.com/index.rdf",
 
@@ -1391,7 +1394,7 @@ class Home extends CI_Controller {
 
 			 "黒マッチョニュース" => "http://kuromacyo.livedoor.biz/index.rdf",
 
-			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf",*/
+			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf",
 			);
 
 			return $urls;

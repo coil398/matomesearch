@@ -64,7 +64,7 @@ class Home_model extends CI_Model
         return $query->result_array();
     }
 
-    function loadAllPages()
+    public function loadAllPages()
     {
         $this->db->select('*');
         $this->db->from('Pages');
@@ -73,6 +73,21 @@ class Home_model extends CI_Model
 
     }
 
+
+    public function setAllBlogs($items)
+    {
+        foreach($items as $key => $value)
+        {
+          //書き込み用の配列を作成
+          $insert_array = array(
+                            "Url" => null,
+                            "Title" => $key,
+                            "Rss" => $value
+                          );
+          //DBにinsert
+          $this->db->insert('blogs', $insert_array);
+        }
+    }
 
 
 }
