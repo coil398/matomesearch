@@ -32,11 +32,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
     <div class="container">
-
+    
         <div class="header">
+        <ul>
             <div class="search">
 
                 <input type="text">
 
             </div>
-        </div>
+        </ul>
+        </div> 
