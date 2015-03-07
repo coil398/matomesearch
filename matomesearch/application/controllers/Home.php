@@ -27,7 +27,9 @@ class Home extends CI_Controller {
 
 		public function index()
 		{
-			$this->load->view('home_index');
+			$this->load->view('home_header');
+			$this->load->view('home_main');
+			$this->load->view('home_footer');
 		}
 
 		public function insertdb($post)
