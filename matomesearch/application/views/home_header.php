@@ -32,11 +32,13 @@
 
 <body>
     <div class="container">
-
+    
         <div class="header">
+        <ul>
             <div class="search">
 
                 <input type="text">
 
             </div>
-        </div>
+        </ul>
+        </div> 
