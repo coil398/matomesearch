@@ -66,10 +66,10 @@ $query_builder = TRUE;
 /*
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
+	'hostname' => 'q8jphw906m.database.windows.net',
+	'username' => 'azureuser',
 	'password' => 'Kawase0307',
-	'database' => 'azuredb',
+	'database' => 'hack',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
