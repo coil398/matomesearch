@@ -16,13 +16,6 @@ class Home_model extends CI_Model
         {
             $blog_title = $xml['channel']['title'];
             $blog_url = $xml['channel']['link'];
-            //$blog_description = $xml['channel']['description'];
-            $blog_array = array(
-                                'title' => $blog_title,
-                                'url' => $blog_url/*,
-                                'description' => $blog_description*/
-                              );
-            $this->db->insert('Blogs', $blog_array);
 
             //$this->searchBlogName($blog_title);
 
@@ -80,7 +73,6 @@ class Home_model extends CI_Model
         {
           //書き込み用の配列を作成
           $insert_array = array(
-                            "Url" => null,
                             "Title" => $key,
                             "Rss" => $value
                           );
