@@ -67,6 +67,7 @@ class Home_model extends CI_Model
     }
 
 
+
     public function setAllBlogs($items)
     {
         foreach($items as $key => $value)
