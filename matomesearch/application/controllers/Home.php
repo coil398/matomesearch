@@ -32,10 +32,12 @@ class Home extends CI_Controller {
 
 			// $this->Home_model->rssInsertDB($xml_lists);
 
+			$db_lists = $this->Home_model->loadAllPages();
+
 			//ビュー用のデータにセット
 			$data['xml_lists'] = $xml_lists;
 
-			//print_r($xml_lists);
+			print_r($db_lists);
 
 			$this->load->view('home_index', $data);
 
@@ -117,9 +119,9 @@ class Home extends CI_Controller {
 
 			 //"鬼女まとめ速報" => "http://kijyosoku.com/index.rdf",//今は使えない
 
-			 "にゅーす特報。" => "http://news109.com/index.rdf"/*,
+			 "にゅーす特報。" => "http://news109.com/index.rdf",
 
-			 "わらぽん速報" => "http://blog.livedoor.jp/muchio68/index.rdf",
+			 //"わらぽん速報" => "http://blog.livedoor.jp/muchio68/index.rdf",//今は使えない
 
 			 "腹筋崩壊ニュース" => "http://www.fknews-2ch.net/index.rdf",
 
@@ -127,9 +129,9 @@ class Home extends CI_Controller {
 
 			 "ゆめ痛 -NEWS ALERT-" => "http://blog.livedoor.jp/yu_ps13/index.rdf",
 
-			 "育ママ速報" => "http://ikumamasokuhou.doorblog.jp/index.rdf",
+			 //"育ママ速報" => "http://ikumamasokuhou.doorblog.jp/index.rdf",//今は使えない
 
-			 "芸能ニュースNOW!!" => "http://blog.geinou-now.com/index.rdf",
+			 /*"芸能ニュースNOW!!" => "http://blog.geinou-now.com/index.rdf",
 
 			 "2ちゃんねるのサッカーまとめブログ" => "http://footballnet.2chblog.jp/index.rdf",
 
@@ -143,7 +145,7 @@ class Home extends CI_Controller {
 
 			 "フットボール速報" => "http://football-2ch.com/index.rdf",
 
-			 "ピカピカニュース2ch" => "http://pika2.livedoor.biz/index.rdf",
+			 //"ピカピカニュース2ch" => "http://pika2.livedoor.biz/index.rdf",//今は使えない
 
 			 "あのにゅーす" => "http://anonews.livedoor.biz/index.rdf",
 
@@ -179,7 +181,7 @@ class Home extends CI_Controller {
 
 			 "隣人注意報" => "http://blog.livedoor.jp/rinjinyabai/index.rdf",
 
-			 "はぅわ！【2ch】" => "http://blog.livedoor.jp/nico3q3q/index.rdf",
+			 "はぅわ！【2ch】" => "http://blog.livedoor.jp/nico3q3q/index.rdf"/*,
 
 			 "ニュース30over" => "http://www.news30over.com/index.rdf",
 

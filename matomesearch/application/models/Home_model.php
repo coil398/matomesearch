@@ -64,6 +64,15 @@ class Home_model extends CI_Model
         return $query->result_array();
     }
 
+    function loadAllPages()
+    {
+        $this->db->select('*');
+        $this->db->from('Pages');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+
 
 
 }
