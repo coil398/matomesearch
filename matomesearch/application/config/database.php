@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -79,7 +80,7 @@ $db['default'] = array(
 	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
 	'autoinit' => TRUE,
-	'encrypt' => FALSE,
+	'encrypt'  => FALSE,
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
