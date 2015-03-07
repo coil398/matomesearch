@@ -64,13 +64,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-/*
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'q8jphw906m.database.windows.net',
-	'username' => 'azureuser',
+	'hostname' => 'localhost',
+	'username' => 'root',
 	'password' => 'Kawase0307',
-	'database' => 'hack',
+	'database' => 'azuredb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -87,9 +86,9 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-*/
 
 //ローカル用
+/*
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -112,3 +111,4 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+*/
