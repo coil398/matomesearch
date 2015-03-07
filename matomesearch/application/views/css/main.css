@@ -1,0 +1,14 @@
+.result {
+    padding-top: 100px;
+}
+
+.result ul {
+    padding: 10px;
+    background: #ddd;
+
+}
+
+.result li {
+    padding: 8px;
+    background: #efefef;
+}
