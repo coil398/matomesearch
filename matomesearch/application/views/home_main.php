@@ -1,4 +1,4 @@
-        <div class="main">
+        <div class="main clearfix">
 
             todo: 検索ボックス、表示画面
 
@@ -8,6 +8,11 @@
                         <a href="blogUrl">ブログ記事タイトル</a>
                         <span class="small">元ブログ</span>
                     </li>
+                    <li>
+                        <a href="blogUrl">ブログ記事タイトル</a>
+                        <span class="small">元ブログ</span>
+                    </li>
+
                 </ul>
 
                 <ul class="right">
@@ -15,6 +20,11 @@
                         <a href="blogUrl">ブログ記事タイトル</a>
                         <span class="small">元ブログ</span>
                     </li>
+                    <li>
+                        <a href="blogUrl">ブログ記事タイトル</a>
+                        <span class="small">元ブログ</span>
+                    </li>
+
                 </ul>
             </div>
 
