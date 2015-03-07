@@ -38,11 +38,11 @@ class Home extends CI_Controller {
 			$this->Home_model->setAllBlogs($url_list);
 
 			//ビュー用のデータにセット
-			$data['xml_lists'] = $xml_lists;
+			//$data['xml_lists'] = $xml_lists;
 
 			//print_r($db_lists);
 
-			$this->load->view('home_index', $data);
+			$this->load->view('home_index');
 
 		}
 
