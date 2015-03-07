@@ -30,10 +30,12 @@ class Home extends CI_Controller {
 			//各xmlの読み込み
 			$xml_lists = $this->loadXml();
 
+			$this->Home_model->rssInsertDB($xml_lists);
+
 			//ビュー用のデータにセット
 			$data['xml_lists'] = $xml_lists;
 
-			print_r($xml_lists);
+			//print_r($xml_lists);
 
 			$this->load->view('home_index', $data);
 
@@ -97,7 +99,7 @@ class Home extends CI_Controller {
 
 			 "いてつくブログ" => "http://fnf.ldblog.jp/index.rdf",
 
-			 "WorldFootballNews" => "http://worldfootballnews.doorblog.jp/index.rdf"/*,
+			 "WorldFootballNews" => "http://worldfootballnews.doorblog.jp/index.rdf",
 
 			 "生活ちゃんねる" => "http://seikatuch.com/index.rdf",
 
@@ -105,17 +107,17 @@ class Home extends CI_Controller {
 
 			 "ぷりそく！" => "http://purisoku.com/index.rdf",
 
-			 "殺風景" => "http://sappukei.livedoor.biz/index.rdf",
+			 //"殺風景" => "http://sappukei.livedoor.biz/index.rdf",//今は使えない
 
 			 "素敵な鬼女様" => "http://sutekinakijo.com/index.rdf",
 
-			 "STAGE2;LOG -すてろぐ。-" => "http://stage2log.com/index.rdf",
+			 //"STAGE2;LOG -すてろぐ。-" => "http://stage2log.com/index.rdf",//今は使えない
 
-			 "のーそく｜にゅーす のー そくほう" => "http://nns2ch.net/index.rdf",
+			 //"のーそく｜にゅーす のー そくほう" => "http://nns2ch.net/index.rdf",//今は使えない
 
-			 "鬼女まとめ速報" => "http://kijyosoku.com/index.rdf",
+			 //"鬼女まとめ速報" => "http://kijyosoku.com/index.rdf",//今は使えない
 
-			 "にゅーす特報。" => "http://news109.com/index.rdf",
+			 "にゅーす特報。" => "http://news109.com/index.rdf"/*,
 
 			 "わらぽん速報" => "http://blog.livedoor.jp/muchio68/index.rdf",
 
