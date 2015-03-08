@@ -46,22 +46,21 @@ class Home extends CI_Controller {
 
 		public function search_keyword()
 		{
-			/*
-			//getで得たデータ
-			$get_data = $this->input->get('search_input', true);
+			
+			// getで得たデータ
+			$get_data = $this->input->get('keyword');
 
-			//DBで検索
+			// DBで検索
+			$data = $this->Home_model->searchPartOfWordInPages($get_data);
+			var_dump($data);
 
-			//$dataをjsonで返す
+			// $dataをjsonで返す
 			$json = json_encode($data);
-			$json ='{ "key": "value" }';
 
 			$this->output
-					 ->set_content_type('Application/json')
-					 ->set_output($json);
-			*/
-
-			$this->load->view('home_index');
+				 ->set_content_type('Application/json')
+				 ->set_output($json);
+			
 		}
 
 

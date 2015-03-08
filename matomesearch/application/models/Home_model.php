@@ -62,11 +62,12 @@ class Home_model extends CI_Model
     public function searchPartOfWordInPages($keyword)
     {
         $this->db->select('*');
-        $this->db->from('Pages');
-        $this->db->like('title', $keyword);
-        $this->db->or_like('description', $keyword);
+        $this->db->from('pages');
+        $this->db->like('Title', $keyword);
+        $this->db->or_like('Description', $keyword);
         //生成されるクエリ ->  // WHERE title LIKE '%$keyword%' OR description LIKE '%$keyword%'
         $query = $this->db->get();
+        // echo $query;
         return $query->result_array();
     }
 
@@ -75,7 +76,7 @@ class Home_model extends CI_Model
     public function loadAllPages()
     {
         $this->db->select('*');
-        $this->db->from('Pages');
+        $this->db->from('pages');
         $query = $this->db->get();
         return $query->result_array();
 
