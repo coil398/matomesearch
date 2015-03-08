@@ -52,7 +52,7 @@ class Home extends CI_Controller {
 
 			// DBで検索
 			$data = $this->Home_model->searchPartOfWordInPages($get_data);
-			var_dump($data);
+			// var_dump($data);
 
 			// $dataをjsonで返す
 			$json = json_encode($data);
