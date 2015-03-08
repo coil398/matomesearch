@@ -1,5 +1,5 @@
 .main {
-
+    
 }
 
 .container {
@@ -32,16 +32,26 @@
 }
 
 .result li {
-    padding: 16px 30px;
     position: relative;
-    border-bottom: 2px solid #f3f3f3;
 }
+
+a{
+    padding:30px 30px;
+    padding-bottom:100px;
+    position:relative;
+    display:block;
+}
+
+a:hover{
+    background-color:#dddddd;
+}
+
 .result li:last-child {
     border: none;
 }
 
 
-.result li .small {
+.result li .description {
     position: absolute;
     right: 30px;
     font-size: 10px;

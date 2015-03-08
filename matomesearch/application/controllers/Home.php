@@ -27,18 +27,6 @@ class Home extends CI_Controller {
 
 		public function index()
 		{
-			//各xmlの読み込み
-			//$xml_lists = $this->loadXml();
-
-			//$this->Home_model->rssInsertDB($xml_lists);
-
-			//$db_lists = $this->Home_model->loadAllPages();
-
-
-			//ビュー用のデータにセット
-			//$data['xml_lists'] = $xml_lists;
-
-			//print_r($db_lists);
 
 			$this->load->view('home_index');
 
@@ -46,13 +34,12 @@ class Home extends CI_Controller {
 
 		public function search_keyword()
 		{
-			
+
 			// getで得たデータ
 			$get_data = $this->input->get('keyword');
 
 			// DBで検索
 			$data = $this->Home_model->searchPartOfWordInPages($get_data);
-			// var_dump($data);
 
 			// $dataをjsonで返す
 			$json = json_encode($data);
@@ -62,6 +49,17 @@ class Home extends CI_Controller {
 				 ->set_output($json);
 			
 		}
+
+
+		//定期DBに書き込み用の関数
+		public function autoInsertDBEveryDay()
+		{
+			//各xmlの読み込み
+			$xml_lists = $this->loadXml();
+			$this->Home_model->rssInsertDB($xml_lists);
+
+		}
+
 
 
 		//xmlの解析して返す
@@ -171,11 +169,11 @@ class Home extends CI_Controller {
 
 			 "キムチ速報" => "http://kimsoku.com/index.rdf",
 
-			 "稲妻速報" => "http://inazumanews2.com/index.rdf",
+			 //"稲妻速報" => "http://inazumanews2.com/index.rdf",
 
 			 "既婚者の墓場" => "http://kikonboti.com/index.rdf",
 
-			 "にゅうにゅうす -アニ萌え情報まとめブログ-" => "http://newnews2ch.com/index.rdf",
+			 //"にゅうにゅうす -アニ萌え情報まとめブログ-" => "http://newnews2ch.com/index.rdf",
 
 			 "GATUN" => "http://blog.livedoor.jp/gatun02/index.rdf",
 
@@ -193,7 +191,7 @@ class Home extends CI_Controller {
 
 			 "Ayu-Nya EXTRA The World of Today" => "http://ayutube.blog.fc2.com/?xml",
 
-			 "裏芸能スポーツ！にゅ～すしぇあ" => "http://blog.news-share.jp/?xml",
+			 //"裏芸能スポーツ！にゅ～すしぇあ" => "http://blog.news-share.jp/?xml",
 
 			 "ちゃま速(￣^￣)" => "http://2chmatomefc.blog.fc2.com/?xml",
 
@@ -217,13 +215,13 @@ class Home extends CI_Controller {
 
 			 "ふぇー速" => "http://fesoku.net/index.rdf",
 
-			 "アニゲー速報ＶＩＰ" => "http://anige-sokuhou.ldblog.jp/index.rdf",
+			 //"アニゲー速報ＶＩＰ" => "http://anige-sokuhou.ldblog.jp/index.rdf",
 
 			 "気ままに備忘録 and TIPS" => "http://blog.livedoor.jp/aokichanyon444/index.rdf",
 
-			 "２ちゃん的韓国ニュース" => "http://blog.livedoor.jp/newskorea/index.rdf",
+			 //"２ちゃん的韓国ニュース" => "http://blog.livedoor.jp/newskorea/index.rdf",
 
-			 "⊂⌒⊃｡Д｡)⊃カジ速≡≡≡⊂⌒つﾟДﾟ)つFull Auto" => "http://www.kajisoku.org/index.rdf",
+			 //"⊂⌒⊃｡Д｡)⊃カジ速≡≡≡⊂⌒つﾟДﾟ)つFull Auto" => "http://www.kajisoku.org/index.rdf",
 
 			 "ろぼ速VIP" => "http://blog.livedoor.jp/robosoku/index.rdf",
 
@@ -232,7 +230,7 @@ class Home extends CI_Controller {
 			 "ジャンプ速報" => "http://jumpsokuhou.com/index.rdf",
 
 			 "エレファント速報：SSまとめブログ" => "http://elephant.2chblog.jp/index.rdf",
-
+//--------------------ここまで使えるかチェック完了（はやし）--------------------------------------------
 			 "ソニック速報" => "http://sonicch.com/index.rdf",
 
 			 "こころのそくほう" => "http://cocoronosokuho.doorblog.jp/index.rdf",
@@ -1411,7 +1409,7 @@ class Home extends CI_Controller {
 
 			 "黒マッチョニュース" => "http://kuromacyo.livedoor.biz/index.rdf",
 
-			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf",
+			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf"
 			);
 
 			return $urls;
