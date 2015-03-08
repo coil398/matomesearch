@@ -40,7 +40,7 @@ class Home extends CI_Controller {
 
 			// DBで検索
 			$data = $this->Home_model->searchPartOfWordInPages($get_data);
-			
+
 			// $dataをjsonで返す
 			$json = json_encode($data);
 
@@ -191,7 +191,7 @@ class Home extends CI_Controller {
 
 			 "Ayu-Nya EXTRA The World of Today" => "http://ayutube.blog.fc2.com/?xml",
 
-			 "裏芸能スポーツ！にゅ～すしぇあ" => "http://blog.news-share.jp/?xml",
+			 //"裏芸能スポーツ！にゅ～すしぇあ" => "http://blog.news-share.jp/?xml",
 
 			 "ちゃま速(￣^￣)" => "http://2chmatomefc.blog.fc2.com/?xml",
 
@@ -215,13 +215,13 @@ class Home extends CI_Controller {
 
 			 "ふぇー速" => "http://fesoku.net/index.rdf",
 
-			 "アニゲー速報ＶＩＰ" => "http://anige-sokuhou.ldblog.jp/index.rdf",
+			 //"アニゲー速報ＶＩＰ" => "http://anige-sokuhou.ldblog.jp/index.rdf",
 
 			 "気ままに備忘録 and TIPS" => "http://blog.livedoor.jp/aokichanyon444/index.rdf",
 
-			 "２ちゃん的韓国ニュース" => "http://blog.livedoor.jp/newskorea/index.rdf",
+			 //"２ちゃん的韓国ニュース" => "http://blog.livedoor.jp/newskorea/index.rdf",
 
-			 "⊂⌒⊃｡Д｡)⊃カジ速≡≡≡⊂⌒つﾟДﾟ)つFull Auto" => "http://www.kajisoku.org/index.rdf",
+			 //"⊂⌒⊃｡Д｡)⊃カジ速≡≡≡⊂⌒つﾟДﾟ)つFull Auto" => "http://www.kajisoku.org/index.rdf",
 
 			 "ろぼ速VIP" => "http://blog.livedoor.jp/robosoku/index.rdf",
 
@@ -230,7 +230,7 @@ class Home extends CI_Controller {
 			 "ジャンプ速報" => "http://jumpsokuhou.com/index.rdf",
 
 			 "エレファント速報：SSまとめブログ" => "http://elephant.2chblog.jp/index.rdf",
-
+//--------------------ここまで使えるかチェック完了（はやし）--------------------------------------------
 			 "ソニック速報" => "http://sonicch.com/index.rdf",
 
 			 "こころのそくほう" => "http://cocoronosokuho.doorblog.jp/index.rdf",
