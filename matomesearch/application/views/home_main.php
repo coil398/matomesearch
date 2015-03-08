@@ -7,13 +7,13 @@
                 <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
-                        <span class="small">元ブログ</span>
+                        <span class="description">Description</span>
                     </li>
                 </div>
             <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
-                        <span class="small">元ブログ</span>
+                        <span class="description">Description</span>
                     </li>
                 </div>
 
@@ -23,13 +23,13 @@
                 <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
-                        <span class="small">元ブログ</span>
+                        <span class="description">Description</span>
                     </li>
                 </div>
                 <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
-                        <span class="small">元ブログ</span>
+                        <span class="description">Description</span>
                     </li>
                 </div>
 
