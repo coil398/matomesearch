@@ -28,7 +28,7 @@ class Home extends CI_Controller {
 		public function index()
 		{
 			//各xmlの読み込み
-			$xml_lists = $this->loadXml();
+			//$xml_lists = $this->loadXml();
 
 			//$this->Home_model->rssInsertDB($xml_lists);
 
@@ -42,6 +42,26 @@ class Home extends CI_Controller {
 
 			$this->load->view('home_index');
 
+		}
+
+		public function search_keyword()
+		{
+			/*
+			//getで得たデータ
+			$get_data = $this->input->get('search_input', true);
+
+			//DBで検索
+
+			//$dataをjsonで返す
+			$json = json_encode($data);
+			$json ='{ "key": "value" }';
+
+			$this->output
+					 ->set_content_type('Application/json')
+					 ->set_output($json);
+			*/
+
+			$this->load->view('home_index');
 		}
 
 
