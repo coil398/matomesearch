@@ -40,8 +40,7 @@ class Home extends CI_Controller {
 
 			// DBで検索
 			$data = $this->Home_model->searchPartOfWordInPages($get_data);
-			var_dump($data);
-
+			
 			// $dataをjsonで返す
 			$json = json_encode($data);
 
@@ -170,11 +169,11 @@ class Home extends CI_Controller {
 
 			 "キムチ速報" => "http://kimsoku.com/index.rdf",
 
-			 "稲妻速報" => "http://inazumanews2.com/index.rdf",
+			 //"稲妻速報" => "http://inazumanews2.com/index.rdf",
 
 			 "既婚者の墓場" => "http://kikonboti.com/index.rdf",
 
-			 "にゅうにゅうす -アニ萌え情報まとめブログ-" => "http://newnews2ch.com/index.rdf",
+			 //"にゅうにゅうす -アニ萌え情報まとめブログ-" => "http://newnews2ch.com/index.rdf",
 
 			 "GATUN" => "http://blog.livedoor.jp/gatun02/index.rdf",
 
