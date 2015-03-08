@@ -12,6 +12,7 @@ class Home_model extends CI_Model
     //取得したrssからDBに書き込み
     public function rssInsertDB($xmls)
     {
+      $date = date('Y - m - d');
         foreach($xmls as $xml)
         {
             $blog_title = $xml['channel']['title'];
@@ -23,12 +24,13 @@ class Home_model extends CI_Model
             {
                 //書き込み用の配列を作成
         				$insert_array = array(
-                        					"url" => $item['link'],
-                        					"title" => $item['title'],
-                        					"description" => $item['description']
+                        					"Url" => $item['link'],
+                        					"Title" => $item['title'],
+                        					"Description" => $item['description'],
+                                  "Date" => $date
                       					);
                 //DBにinsert
-        				$this->db->insert('Pages', $insert_array);
+        				$this->db->insert('pages', $insert_array);
             }
 
         }
@@ -40,7 +42,7 @@ class Home_model extends CI_Model
     {
         //ブログタイトルから検索
         $this->db->select('*');
-        $this->db->from('Blogs');
+        $this->db->from('blogs');
         $this->db->like('title', $keyword);
         $this->db->or_like('description', $keyword);
         $query = $this->db->get();
