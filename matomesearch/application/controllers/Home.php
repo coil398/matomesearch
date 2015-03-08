@@ -47,7 +47,7 @@ class Home extends CI_Controller {
 			$this->output
 				 ->set_content_type('Application/json')
 				 ->set_output($json);
-
+			
 		}
 
 
