@@ -27,18 +27,6 @@ class Home extends CI_Controller {
 
 		public function index()
 		{
-			//各xmlの読み込み
-			//$xml_lists = $this->loadXml();
-
-			//$this->Home_model->rssInsertDB($xml_lists);
-
-			//$db_lists = $this->Home_model->loadAllPages();
-
-
-			//ビュー用のデータにセット
-			//$data['xml_lists'] = $xml_lists;
-
-			//print_r($db_lists);
 
 			$this->load->view('home_index');
 
@@ -46,7 +34,7 @@ class Home extends CI_Controller {
 
 		public function search_keyword()
 		{
-			
+
 			// getで得たデータ
 			$get_data = $this->input->get('keyword');
 
@@ -60,8 +48,19 @@ class Home extends CI_Controller {
 			$this->output
 				 ->set_content_type('Application/json')
 				 ->set_output($json);
-			
+
 		}
+
+
+		//定期DBに書き込み用の関数
+		public function autoInsertDBEveryDay()
+		{
+			//各xmlの読み込み
+			$xml_lists = $this->loadXml();
+			$this->Home_model->rssInsertDB($xml_lists);
+
+		}
+
 
 
 		//xmlの解析して返す
@@ -1411,7 +1410,7 @@ class Home extends CI_Controller {
 
 			 "黒マッチョニュース" => "http://kuromacyo.livedoor.biz/index.rdf",
 
-			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf",
+			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf"
 			);
 
 			return $urls;
