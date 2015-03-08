@@ -36,9 +36,14 @@
 }
 
 a{
-    padding:16px 30px;
+    padding:30px 30px;
+    padding-bottom:100px;
     position:relative;
     display:block;
+}
+
+a:hover{
+    background-color:#dddddd;
 }
 
 .result li:last-child {
@@ -46,7 +51,7 @@ a{
 }
 
 
-.result li .small {
+.result li .description {
     position: absolute;
     right: 30px;
     font-size: 10px;
@@ -56,10 +61,6 @@ a{
 
 .result .left {
     float: left;
-}
-
-.items:hover{
-    background-color:#dddddd;
 }
 
 .result .right {
