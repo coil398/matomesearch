@@ -36,12 +36,13 @@ class Home_model extends CI_Model
     }
 
     //ブログのタイトルからDB内容を検索
-    function searchBlogName($blog_title)
+    function searchPartOfWordInBlogs($keyword)
     {
         //ブログタイトルから検索
         $this->db->select('*');
         $this->db->from('Blogs');
-        $this->db->where('title='.$blog_name);
+        $this->db->like('title', $keyword);
+        $this->db->or_like('description', $keyword);
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -56,6 +57,20 @@ class Home_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    //DBから部分一致で検索
+    public function searchPartOfWordInPages($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('Pages');
+        $this->db->like('title', $keyword);
+        $this->db->or_like('description', $keyword);
+        //生成されるクエリ ->  // WHERE title LIKE '%$keyword%' OR description LIKE '%$keyword%'
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+
 
     public function loadAllPages()
     {
