@@ -4,26 +4,34 @@
 
             <div class="result">
                 <ul class="left">
+                <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
                         <span class="small">元ブログ</span>
                     </li>
+                </div>
+            <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
                         <span class="small">元ブログ</span>
                     </li>
+                </div>
 
                 </ul>
 
                 <ul class="right">
+                <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
                         <span class="small">元ブログ</span>
                     </li>
+                </div>
+                <div class="items">
                     <li>
                         <a href="blogUrl">ブログ記事タイトル</a>
                         <span class="small">元ブログ</span>
                     </li>
+                </div>
 
                 </ul>
             </div>
