@@ -1,6 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// TODO: このファイル全体が全く動いてない可能性あり
+
+$route['default_controller'] = 'home';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+
+$route['index'] = 'home'; 
+
+
+$route['search'] = 'home/search';
+
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -49,9 +60,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-
-$route['default_controller'] = 'home';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-
-$route['index'] = 'home'; 
