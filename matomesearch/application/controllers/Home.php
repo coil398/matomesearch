@@ -44,6 +44,26 @@ class Home extends CI_Controller {
 
 		}
 
+		public function search_keyword()
+		{
+			/*
+			//getで得たデータ
+			$get_data = $this->input->get('search_input', true);
+
+			//DBで検索
+
+			//$dataをjsonで返す
+			$json = json_encode($data);
+			$json ='{ "key": "value" }';
+
+			$this->output
+					 ->set_content_type('Application/json')
+					 ->set_output($json);
+			*/
+
+			$this->load->view('home_index');
+		}
+
 
 		//xmlの解析して返す
 		function loadXml()
