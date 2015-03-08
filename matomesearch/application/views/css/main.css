@@ -1,5 +1,5 @@
 .main {
-
+    
 }
 
 .container {
@@ -32,10 +32,15 @@
 }
 
 .result li {
-    padding: 16px 30px;
     position: relative;
-    border-bottom: 2px solid #f3f3f3;
 }
+
+a{
+    padding:16px 30px;
+    position:relative;
+    display:block;
+}
+
 .result li:last-child {
     border: none;
 }
@@ -51,6 +56,10 @@
 
 .result .left {
     float: left;
+}
+
+.items:hover{
+    background-color:#dddddd;
 }
 
 .result .right {
