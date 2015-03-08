@@ -28,7 +28,7 @@ class Home_model extends CI_Model
                         					"description" => $item['description']
                       					);
                 //DBにinsert
-        				$this->db->insert('Pages', $insert_array);
+        				$this->db->insert('pages', $insert_array);
             }
 
         }
@@ -40,7 +40,7 @@ class Home_model extends CI_Model
     {
         //ブログタイトルから検索
         $this->db->select('*');
-        $this->db->from('Blogs');
+        $this->db->from('blogs');
         $this->db->like('title', $keyword);
         $this->db->or_like('description', $keyword);
         $query = $this->db->get();

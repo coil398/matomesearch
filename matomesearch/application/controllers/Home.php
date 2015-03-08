@@ -149,7 +149,7 @@ class Home extends CI_Controller {
 
 			 //"育ママ速報" => "http://ikumamasokuhou.doorblog.jp/index.rdf",//今は使えない
 
-			 "芸能ニュースNOW!!" => "http://blog.geinou-now.com/index.rdf",
+			 //"芸能ニュースNOW!!" => "http://blog.geinou-now.com/index.rdf",
 
 			 "2ちゃんねるのサッカーまとめブログ" => "http://footballnet.2chblog.jp/index.rdf",
 
@@ -245,7 +245,7 @@ class Home extends CI_Controller {
 
 			 "日刊やきう速報＠なんJ" => "http://blog.livedoor.jp/yakiusoku/index.rdf",
 
-			 "芸能人の気になる噂" => "http://blog.livedoor.jp/uwasainfo/index.rdf",
+			 "芸能人の気になる噂" => "http://blog.livedoor.jp/uwasainfo/index.rdf"/*,
 
 			 "AKB48まとめんばー" => "http://akb48matome.com/index.rdf",
 
@@ -1409,7 +1409,7 @@ class Home extends CI_Controller {
 
 			 "黒マッチョニュース" => "http://kuromacyo.livedoor.biz/index.rdf",
 
-			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf"
+			 "アクアカタリスト" => "http://aqua2ch.net/index.rdf"*/
 			);
 
 			return $urls;
