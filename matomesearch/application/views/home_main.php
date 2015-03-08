@@ -1,7 +1,5 @@
         <div class="main clearfix">
 
-            todo: 検索ボックス、表示画面
-
             <div class="result">
                 <ul class="left">
                 <div class="items">
